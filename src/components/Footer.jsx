@@ -4,14 +4,14 @@ import Container from "~/components/Container"
 import footerIllustration from "root/assets/footer.svg"
 
 const Wrapper = styled.div`
-    padding: 28rem 0 4rem 0;
+    padding: 28rem 0 0 0;
     background-image: url(${footerIllustration});
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
 
     @media (max-width: 1960px) {
-        padding: 14rem 0 4rem;
+        padding: 14rem 0 0;
     }
 `
 
