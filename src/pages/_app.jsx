@@ -1,6 +1,7 @@
 import React, { Fragment } from "react"
 import Head from "next/head"
 import NextApp from "next/app"
+//import { withRoute } from "next/router"
 import Header from "~/components/Header"
 import Footer from "~/components/Footer"
 import { fetchGithubUser } from "~/helpers"
@@ -37,7 +38,7 @@ class App extends NextApp {
 					<meta name="author" content={name} />
 					<meta name="description" content={about} />
 				</Head>
-				<Header title={name} github={github} email={email} />
+				<Header title={name} github={github} email={email} currentPage={} />
 				<this.props.Component author={this.props.author} {...this.props.pageProps} />
 				<Footer title={name} />
 			</Fragment>

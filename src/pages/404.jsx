@@ -1,6 +1,7 @@
 import { Fragment } from "react"
 import Head from "next/head"
 import Container from "~/components/Container"
+import Text from "~/components/Text"
 
 const Error = ({ author }) => (
     <Fragment>
@@ -8,8 +9,8 @@ const Error = ({ author }) => (
             <title>{author.name} | Not Found</title>
         </Head>
         <Container>
-            <h1>Not Found</h1>
-            <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+            <h2>Not Found</h2>
+            <Text>You just hit a route that doesn&#39;t exist... the sadness.</Text>
         </Container>
     </Fragment>
 )

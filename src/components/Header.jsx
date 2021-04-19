@@ -14,18 +14,25 @@ const Flex = styled.div`
 	}
 `
 
-const Header = ({ title, github, email }) => {
+const Links = styled.div`
+	a {
+		margin-left: 0.5em;
+	}
+`
+
+const Header = ({ title, github }) => {
 	return (
 		<Container>
 			<Flex>
 				<h1>
 					<Link href="/">{ title }</Link>
 				</h1>
-				<Text>
+				<Links as={Text}>
+					<Link href="/">Portfolio</Link>
+					<Link href="/contact">Contact</Link>
 					<Link href={github}>Github</Link>
-				</Text>
+				</Links>
 			</Flex>
-			<Text small>{email}</Text>
 		</Container>
 	)
 }

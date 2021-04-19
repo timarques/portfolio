@@ -6,6 +6,10 @@ const Text = styled.div`
     font-weight: normal;
     line-height: 1.3;
     color: #f0f0f0;
+    a {
+        color: #fff;
+        font-weight: bold;
+    }
 `
 
 export default Text
