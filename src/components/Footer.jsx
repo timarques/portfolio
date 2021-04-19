@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Container from "~/components/Container"
-import footerIllustration from "~/assets/footer.svg"
+import footerIllustration from "root/assets/footer.svg"
 
 const Wrapper = styled.div`
     padding: 28rem 0 4rem 0;

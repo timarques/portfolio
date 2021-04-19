@@ -4,7 +4,7 @@ import NextApp from "next/app"
 import Header from "~/components/Header"
 import Footer from "~/components/Footer"
 import { fetchGithubUser } from "~/helpers"
-import "~/assets/app.scss"
+import "root/assets/app.scss"
 
 class App extends NextApp {
 
