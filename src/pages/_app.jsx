@@ -19,11 +19,11 @@ class App extends NextApp {
 		return {
 			initialProps,
 			author: {
-				avatar: process.env.DATA_AVATAR || user.avatarUrl,
-				name: process.env.DATA_NAME || user.name,
-				about: process.env.DATA_ABOUT || user.bio,
-				email: process.env.DATA_EMAIL || user.email,
-				github: process.env.DATA_GITHUB || user.url,
+				avatar: user.avatarUrl,
+				name: user.name,
+				about: user.bio,
+				email: user.email,
+				github: user.url,
 			}
 		} 
 	}
