@@ -11,6 +11,9 @@ const Card = styled.div`
 
 const CardContent = styled.div`
     padding: 1rem 0;
+    h4 {
+        margin: 0 0 1rem;
+    }
     p {
         margin-bottom: 0;
     }
