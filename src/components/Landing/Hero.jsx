@@ -26,10 +26,9 @@ const Details = styled.div`
 	}
 `
 
-const Hero = ({ about, position }) => (
+const Hero = ({ about }) => (
 	<Container>
 		<Details>
-			<h2>{position}</h2>
 			<Text>{about}</Text>
 		</Details>
 	</Container>
