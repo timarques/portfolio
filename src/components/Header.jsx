@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import Link from "next/link"
 import Container from "~/components/Container"
-import Text from "~/components/Text"
 
 const Flex = styled.div`
 	display: flex;
@@ -14,27 +13,14 @@ const Flex = styled.div`
 	}
 `
 
-const Links = styled.div`
-	a {
-		margin-left: 0.5em;
-	}
-`
-
-const Header = ({ title, github }) => {
-	return (
-		<Container>
-			<Flex>
-				<h1>
-					<Link href="/">{ title }</Link>
-				</h1>
-				<Links as={Text}>
-					<Link href="/">Portfolio</Link>
-					<Link href="/contact">Contact</Link>
-					<Link href={github}>Github</Link>
-				</Links>
-			</Flex>
-		</Container>
-	)
-}
+const Header = ({ name }) => (
+	<Container>
+		<Flex>
+			<h1>
+				<Link href="/">{`${name}'s Portfolio`}</Link>
+			</h1>
+		</Flex>
+	</Container>
+)
 
 export default Header

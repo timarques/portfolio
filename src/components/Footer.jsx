@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Container from "~/components/Container"
+import Text from "~/components/Text"
 import footerIllustration from "root/assets/footer.svg"
 
 const Wrapper = styled.div`
@@ -15,10 +16,10 @@ const Wrapper = styled.div`
     }
 `
 
-const Flex = styled.div`
+const Flex = styled(Container)`
     display: flex;
-    align-items: flex-end;
     justify-content: space-between;
+    align-items: center;
 
     @media (max-width: 680px) {
         flex-direction: column;
@@ -28,22 +29,32 @@ const Flex = styled.div`
 `
 
 const Details = styled.div`
+    padding: 1rem 0;
     h2, a, span {
         color: #212121;
     }
+`
 
-    @media (max-width: 680px) {
-        margin-bottom: 2rem;
+const Links = styled(Text)`
+    a {
+        color: #212121;
     }
 `
 
-const Footer = ({ title }) => (
+const Title = styled.h2`
+    margin-bottom: 1rem;
+`
+
+const Footer = ({ github, name }) => (
     <Wrapper>
-        <Flex as={ Container }>
+        <Flex>
             <Details>
-                <h2>{ title }</h2>
+                <Title>{name}'s Portfolio</Title>
                 <span>© All rights are reserved | {new Date().getFullYear()}</span>
             </Details>
+            <Links small>
+                <a href={github} target="_blank">Github</a>
+            </Links>
         </Flex>
     </Wrapper>
 )

@@ -30,7 +30,7 @@ class App extends NextApp {
 	}
 
 	render() {
-		const { avatar, name, about, github, email } = this.props.author
+		const { avatar, name, about, github } = this.props.author
 		return (
 			<Fragment>
 				<Head>
@@ -38,9 +38,9 @@ class App extends NextApp {
 					<meta name="author" content={name} />
 					<meta name="description" content={about} />
 				</Head>
-				<Header title={name} github={github} email={email} currentPage={} />
+				<Header name={name} />
 				<this.props.Component author={this.props.author} {...this.props.pageProps} />
-				<Footer title={name} />
+				<Footer name={name} github={github} />
 			</Fragment>
 		)
 	}

@@ -11,17 +11,13 @@ const getStaticProps = async () => {
     }
 }
 
-const Home = ({ author: { name, about }, repositories }) => {
+const Home = ({ author: { name }, repositories }) => {
 	return (
 		<Fragment>
 			<Head>
-				<title>{ name } | { about }</title>
+				<title>{ name } | Portfolio</title>
 			</Head>
-			<Landing 
-				repositories={repositories}
-				name={name}
-				about={about}
-			/>
+			<Landing repositories={repositories} />
 		</Fragment>
 	)
 }
